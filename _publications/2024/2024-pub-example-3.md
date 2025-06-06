@@ -1,22 +1,20 @@
 ---
-title:          "Convallis a cras semper auctor neque vitae rutrum quisque non tellus orci ac"
-date:           2024-05-12 00:01:00 +0800
+title:          "A Survey of Unsupervised Learning-Based Out-of-Distribution Detection"
+date:           2024-11-04 13:30:00 +0700
 selected:       true
-pub:            "International Conference on Machine Learning (ICML)"
+pub:            "IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia)"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
-pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2024"
 
 abstract: >-
-  Photo by Pineapple Supply Co. on Unsplash. Please put a tldr (too-long-didnt-read, 1~2 sentences) of your publication here. It is not recommended to put the actual abstract here because it is usually too long to fit in. $\LaTeX$ is supported. $a=b+c$.
-cover:          /assets/images/covers/cover3.jpg
+  Out-of-distribution (OOD) detection is the task of distinguishing abnormal data that lies outside the bounds of the training dataset’s distribution. OOD detection plays a vital role in various applications of machine learning and deep learning, including intrusion detection in cybersecurity, diagnostics in medical data, and defect classification in manufacturing processes. While models for OOD detection are typically trained using supervised learning, this approach requires significant cost and effort such as collection and labeling of OOD data. To address this issue, unsupervised learning-based methods have been proposed, which can overcome the drawbacks of supervised approaches. In this paper, we introduce generative model-based OOD methods and self-supervised OOD detection methods within the realm of unsupervised learning.
+cover:          /assets/images/covers/ICCEASIA.jpg
 authors:
-  - Your Name
-  - James Wang
-  - Some Other Name
-  - John Doe
+  - <strong>Hyeongseob Jo</strong>
+  - Seunggi Park
+  - Sung In Cho
 links:
-  Code: https://github.com/luost26/academic-homepage
-  Unsplash: https://unsplash.com/photos/sliced-in-half-pineapple--_PLJZmHZzk
+  Paper: https://ieeexplore.ieee.org/abstract/document/10773891
+
 ---
