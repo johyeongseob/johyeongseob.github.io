@@ -7,5 +7,5 @@ pages:
   url: /publications
 - name: Showcase
   url: /showcase
-# - name: Curriculum Vitae
-#   url: https://github.com/johyeongseob/cv-johs/blob/master/cv.pdf
+- name: Curriculum Vitae
+  url: https://github.com/johyeongseob/cv-johs/blob/master/cv.pdf
