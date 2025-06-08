@@ -2,7 +2,7 @@ homepage:
   show_news: true
   show_selected_publications: true
   num_news: 10
-  show_Project: true
+  show_completed_projects: true
   
 
 # Feel free to replace the footer text if you would like to, but I will greatly appreciate it 
