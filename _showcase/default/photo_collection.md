@@ -12,6 +12,10 @@ images:
   title: Dongguk University
   desc: Winter, 2024
   link: https://www.dongguk.edu/
+- src: /assets/images/photos/lamplight.jpg
+  title: Dongguk University
+  desc: Summer, 2025
+  link: https://www.dongguk.edu/
 ---
 
 {% include widgets/carousel.html id=page.id images=page.images height=page.height %}
