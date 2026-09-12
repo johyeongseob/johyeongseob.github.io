@@ -9,7 +9,7 @@ description: Personal website featuring my profile, projects, and interests.
 external-image: false
 picture: assets/images/profile.jpg
 
-# Theme: true, false, or auto
+# Theme: true, false, or auto 
 dark-theme: auto
 
 # Resume
