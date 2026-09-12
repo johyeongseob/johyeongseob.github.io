@@ -1,0 +1,84 @@
+# Site identity
+title: Hyeongseob Jo
+bio: AI Agent Engineer from South Korea
+
+# Search engines and social previews
+description: Personal website featuring my profile, projects, and interests.
+
+# Profile image
+external-image: false
+picture: assets/images/profile.jpg
+
+# Theme: true, false, or auto
+dark-theme: auto
+
+# Resume
+resume: false
+resume-external: true
+resume-url: ""
+
+# Site URL
+url: https://johyeongseob.github.io
+permalink: /:title/
+
+# Comments
+disqus:
+  shortname:
+  categories: []
+
+# Social links
+linkedin: hyeongseob-jo-7b102b344
+github: johyeongseob
+email: hs.jo@interxlab.com
+
+# Author
+authors:
+  johyeongseob:
+    name: Hyeongseob Jo
+    bio: AI Agent Engineer from South Korea
+    external-image: false
+    picture: assets/images/profile.jpg
+
+# Layout width: normal or large
+width: large
+
+# Navigation
+projects: true
+about: true
+blog: false
+
+# Post features
+read-time: false
+show-tags: false
+related: false
+post-advance-links: []
+show-author: false
+animation: false
+
+# Default page layout
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      hidden: false
+
+# GitHub Pages plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+
+compress_html:
+  ignore:
+    envs:
+      - development
+      - stage
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - FAQ.md
+  - vendor
