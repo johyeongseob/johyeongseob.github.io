@@ -1,0 +1,97 @@
+.site-controls
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 12px
+    padding: 16px
+
+.theme-switch
+    display: flex
+    gap: 4px
+    padding: 4px
+    border: 1px solid $epsilon
+    border-radius: 28px
+    background: $omega
+
+    &[hidden]
+        display: none
+
+    button
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 44px
+        height: 44px
+        padding: 0
+        border: 0
+        border-radius: 50%
+        background: transparent
+        color: $alpha
+        cursor: pointer
+
+        &:hover, &[aria-pressed="true"]
+            background: $epsilon
+            color: $beta
+
+        &:focus-visible
+            outline: 2px solid $delta
+            outline-offset: 2px
+
+    svg
+        width: 22px
+        height: 22px
+        fill: none
+        stroke: currentColor
+        stroke-width: 1.7
+        stroke-linecap: round
+        stroke-linejoin: round
+
+.language-switch
+    display: flex
+    align-items: center
+    gap: 12px
+    color: $beta
+    font-size: 1.6rem
+    font-weight: 500
+
+    &[hidden]
+        display: none
+
+    > span
+        color: $alpha
+
+    > a
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        min-height: 44px
+        min-width: 44px
+        padding: 0 4px
+        color: $alpha
+        font-family: inherit
+        font-size: 1.7rem
+        font-weight: 400
+        text-decoration: none
+        text-underline-offset: 6px
+        cursor: pointer
+
+        &:hover
+            color: $beta
+            text-decoration: underline
+
+        &[aria-current="true"]
+            color: $beta
+            font-weight: 700
+            text-decoration: underline
+            text-decoration-thickness: 2px
+
+        &:focus-visible
+            outline: 2px solid $delta
+            outline-offset: 2px
+
+    @media (max-width: 400px)
+        gap: 6px
+        font-size: 1.4rem
+
+        > a
+            font-size: 1.6rem

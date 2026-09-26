@@ -1,0 +1,52 @@
+<nav class="language-switch" aria-label="Language / 언어" hidden>
+    <a href="#" data-language="en" lang="en" aria-label="English">English</a>
+    <span aria-hidden="true">|</span>
+    <a href="#" data-language="ko" lang="ko" aria-label="한국어">한국어</a>
+</nav>
+<script>
+(function () {
+    var language = 'en';
+    try {
+        var saved = localStorage.getItem('site-language');
+        if (saved === 'ko' || saved === 'en') language = saved;
+    } catch (error) {}
+    document.documentElement.lang = language;
+    var translations = {
+        name: [{{ site.title | jsonify }}, '조형섭'],
+        home: ['Home', '홈'], blog: ['Blog', '블로그'],
+        projects: ['Projects', '프로젝트'], about: ['About', '소개'],
+        resume: ['Résumé', '이력서'], skills: ['Skills', '기술'],
+        bio: [{{ site.bio | jsonify }}, {{ site.bio-ko | default: '인공지능 에이전트 엔지니어, 대한민국 서울' | jsonify }}]
+    };
+    document.addEventListener('DOMContentLoaded', function () {
+        var links = document.querySelectorAll('[data-language]');
+        function applyLanguage() {
+            document.documentElement.lang = language;
+            links.forEach(function (link) {
+                if (link.dataset.language === language) link.setAttribute('aria-current', 'true');
+                else link.removeAttribute('aria-current');
+            });
+            document.querySelectorAll('[data-i18n]').forEach(function (element) {
+                var text = translations[element.dataset.i18n];
+                if (text) element.textContent = text[language === 'ko' ? 1 : 0];
+            });
+            ['light', 'dark'].forEach(function (theme) {
+                var button = document.querySelector('[data-theme-choice="' + theme + '"]');
+                var label = language === 'ko' ? (theme === 'light' ? '밝은 모드' : '어두운 모드') : (theme === 'light' ? 'Light mode' : 'Dark mode');
+                button.setAttribute('aria-label', label);
+                button.title = label;
+            });
+        }
+        links.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                language = link.dataset.language;
+                try { localStorage.setItem('site-language', language); } catch (error) {}
+                applyLanguage();
+            });
+        });
+        applyLanguage();
+        document.querySelector('.language-switch').hidden = false;
+    });
+})();
+</script>
