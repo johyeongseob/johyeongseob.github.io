@@ -4,3 +4,7 @@ _site
 Gemfile.lock
 .bundle
 vendor/
+.jekyll-cache/
+.jekyll-metadata
+Thumbs.db
+Desktop.ini
