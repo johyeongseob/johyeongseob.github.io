@@ -1,67 +1,44 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a></h2>
-</p>
+# Hyeongseob Jo
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+Hyeongseob Jo's personal blog, featuring my profile, projects, and interests.
 
-***
+- Website: https://johyeongseob.github.io/
+- Languages: Korean and English
+- Built with Jekyll and hosted on GitHub Pages
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside</a></b>
-    |
-    <b><a href="README.md#setup">Setup</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-</p>
+## Local Preview
 
-<p align="center">
-    Light and Dark themes.
-</p>
+Open Docker Desktop before starting the local preview, and wait until its Linux engine is running. Keep Docker Desktop running while previewing the site.
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
-</p>
+Confirm that Docker is ready:
 
-## What has inside
-
-- [Jekyll](https://jekyllrb.com/), [Sass](https://sass-lang.com/) ~[RSCSS](https://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/);
-- Page Speed: [99~Desktop](https://pagespeed.web.dev/analysis/https-sergiokopplin-github-io-indigo/41axptm3as?utm_source=psi&utm_medium=redirect&form_factor=desktop);
-
-## Setup
-
-0. :star: to the project. :metal:
-1. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-2. Edit `_config.yml` with your data
-3. Write some posts :bowtie:
-
-To run locally do the following:
-
-1. Install [Jekyll](https://jekyllrb.com) and [Bundler](https://bundler.io/).
-2. Clone the forked repo on your machine
-3. Enter the cloned folder via terminal and run:
-```sh
-bundle install
-bundle exec jekyll serve
+```powershell
+docker info
 ```
-4. Open it in your browser: [http://localhost:4000](http://localhost:4000)
 
-Or run with [docker](https://github.com/BretFisher/jekyll-serve).
+If you see a connection error mentioning `dockerDesktopLinuxEngine`, make sure Docker Desktop is open and its engine has finished starting.
 
-## Settings
+Once `docker info` displays server information without a connection error, run the following command from the repository directory:
 
-You can customize your site on `_config.yml` file.
+```powershell
+docker compose run --rm -p 4000:4000 -p 35729:35729 jekyll sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload"
+```
 
-## How To?
+Open [http://localhost:4000](http://localhost:4000). Saving changes triggers a rebuild and automatically refreshes the browser.
 
-Check the [FAQ](./FAQ.md).
+- The first run may take a few minutes to install dependencies.
+- After changing `_config.yml`, stop the server with `Ctrl+C` and run the command again.
 
----
-## License
+## Key Files
 
-[MIT](https://kopplin.mit-license.org/) License © Sérgio Kopplin
+- `_config.yml`: Profile, site settings, and navigation
+- `about.md`: About page
+- `_posts/`: Blog posts
+- `assets/`: Images and static files
+- `_includes/`, `_layouts/`, `_sass/`: Page components, layouts, and styles
 
----
+## Theme and License
 
-[![Star History Chart](https://api.star-history.com/svg?repos=sergiokopplin/indigo&type=Date)](https://star-history.com/#sergiokopplin/indigo&Date)
+Based on the [Indigo theme by Sérgio Kopplin](https://github.com/sergiokopplin/indigo).
+
+Original theme: [MIT](https://kopplin.mit-license.org/) License © Sérgio Kopplin
