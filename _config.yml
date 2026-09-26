@@ -1,6 +1,6 @@
 # Site identity
 title: Hyeongseob Jo
-bio: AI Agent Engineer from South Korea
+bio: AI Agent Engineer from Seoul, South Korea
 
 # Search engines and social previews
 description: Personal website featuring my profile, projects, and interests.
@@ -13,9 +13,9 @@ picture: assets/images/profile.jpg
 dark-theme: auto
 
 # Resume
-resume: false
+resume: true
 resume-external: true
-resume-url: ""
+resume-url: "https://github.com/johyeongseob/resume/blob/master/resume.pdf"
 
 # Site URL
 url: https://johyeongseob.github.io
@@ -27,7 +27,7 @@ disqus:
   categories: []
 
 # Social links
-linkedin: hyeongseob-jo-7b102b344
+linkedin: hyeongseob-jo-909952415
 github: johyeongseob
 email: hs.jo@interxlab.com
 
@@ -35,7 +35,7 @@ email: hs.jo@interxlab.com
 authors:
   johyeongseob:
     name: Hyeongseob Jo
-    bio: AI Agent Engineer from South Korea
+    bio: AI Agent Engineer from Seoul, South Korea
     external-image: false
     picture: assets/images/profile.jpg
 
